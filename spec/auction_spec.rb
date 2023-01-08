@@ -162,7 +162,6 @@ RSpec.describe Auction do
   it "can test a date in the past" do 
 
     allow(auction).to receive(:date).and_return("03/14/1990")
-    require 'pry'; binding.pry
 
     expect(auction.date).to eq("03/14/1990")
 
