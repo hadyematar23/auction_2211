@@ -13,4 +13,12 @@ class Auction
       item.name
     end
   end
+
+  def unpopular_items
+    popular_items = @items.find_all do |item|
+      item.bids.empty? == false
+    end
+    unpopular_items = @items - popular_items
+    return unpopular_items
+  end
 end
