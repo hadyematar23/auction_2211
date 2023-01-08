@@ -25,8 +25,8 @@ RSpec.describe Auction do
   end 
 
   it "can list the names of the items" do 
-    pry(main)> auction.add_item(item1)
-    pry(main)> auction.add_item(item2)
+    auction.add_item(item1)
+    auction.add_item(item2)
 
     expect(auction.item_names).to match_array(["Chalkware Piggy Bank", "Bamboo Picture Frame"])
   end 

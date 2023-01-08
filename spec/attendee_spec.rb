@@ -1,5 +1,5 @@
 require './lib/item'
-# require './lib/auction'
+require './lib/auction'
 require './lib/attendee'
 
 RSpec.describe Attendee do 
@@ -20,7 +20,7 @@ RSpec.describe Attendee do
     expect(attendee.budget).to eq(50)
   end 
 
-  
+
 
 
 
