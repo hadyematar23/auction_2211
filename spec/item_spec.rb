@@ -1,11 +1,12 @@
 require './lib/item'
 # require './lib/auction'
-# require './lib/attendee'
+require './lib/attendee'
 
 RSpec.describe Item do 
   context "happy paths for Item" do 
   let(:item1){Item.new('Chalkware Piggy Bank')} 
   let(:item2){Item.new('Bamboo Picture Frame')}
+  let(:attendee){Attendee.new(name: 'Megan', budget: '$50')}
 
   it "exists as an object item" do
     expect(item1).to be_an_instance_of(Item)
