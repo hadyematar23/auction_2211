@@ -153,12 +153,20 @@ RSpec.describe Auction do
     })
   end 
 
-  it "can create an auction with the date" do 
-
+  it "can create an auction with the current date" do 
+# This was done just for myself as I had a lot of trouble with the Date.today portion-- started trying things that were not necessary
     expect(auction.date).to eq("01/08/2023")
 
   end 
 
+  it "can test a date in the past" do 
+
+    allow(auction).to receive(:date).and_return("03/14/1990")
+    require 'pry'; binding.pry
+
+    expect(auction.date).to eq("03/14/1990")
+
+  end 
 
   end
 end 
