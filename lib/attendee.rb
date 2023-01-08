@@ -1,3 +1,4 @@
+require 'date'
 class Attendee
       attr_reader :name, 
                   :budget
